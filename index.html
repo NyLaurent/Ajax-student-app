@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Details App</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        body{
+           font-family: Roboto,arial;
+           background-color: black;
+           color: white;
+           display: flex;
+           align-content: center;
+           justify-content: center;
+           height: 500px;
+           margin-top: 300px;
+           gap: 20px;
+        }
+        .form{
+            background-color: black;
+            height: 500px;
+            width: 500px;
+            border: 2px solid burlywood;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+        h2{
+            color: white;
+            text-align: center;
+        }
+        input{
+            padding: 10px;
+            margin: 10px ;
+            border: 2px solid burlywood;
+            color: white;
+            background-color: black;
+            border-radius: 5px;
+        }
+        input::placeholder{
+            color: rgb(120,120,120);
+            background-color: black;
+            font-size: 15px;
+        }
+        button {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 5px;
+            padding-left: 5px;
+            border: 2px solid burlywood;
+            border-radius: 25px;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.5s,color 0.5s;
+        }
+        button:hover {
+            background-color: black;
+            color: burlywood;
+        }
+    </style>
+    <body>
+       
+        <!--Form to add new student-->
+        <form id="addForm" class="form">
+            <h2>Student Details</h2>
+            <p>TURINUMUGISHA GASORE CORENE</p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required placeholder="Slanie">
+            <br>
+            <label for="age">Age:</label>
+            <input type="text" id="age" required placeholder="17">
+            <br>
+            <label for="grade">Grade:</label>
+            <input type="text" id="grade" required placeholder="B">
+            <br>
+            <button type="button" onclick="addStudent()">Add Student</button>
+        </form>
+
+        <!--Display student details-->
+        <div id="studentList"></div>
+
+        <!--Include your custom JavaScript file-->
+        <script src="myJS.js"></script>
+    </body>
+</html>
